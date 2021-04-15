@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // Square component
-const Square = () => {
+const Square = (props) => {
   return (
-    <div className='square'>
-      X
+    <div className="square">
+      {props.value}
     </div>
   );
 };
@@ -15,6 +15,13 @@ const Square = () => {
 
 // Board component
 const Board = () => {
+  // Render Square component
+  const renderSquare = (i) => {
+    return (
+      <Square value={i}/>
+    );
+  };
+
   return (
     <div style={{
       backgroundColor: "grey",
@@ -22,14 +29,14 @@ const Board = () => {
       padding: 20,
     }}>
       Board
-      <div className='board-row'>
-        <Square /><Square /><Square />
+      <div className="board-row">
+        {renderSquare(0)}{renderSquare(1)}{renderSquare(2)}
       </div>
-      <div className='board-row'>
-        <Square /><Square /><Square />
+      <div className="board-row">
+        {renderSquare(3)}{renderSquare(4)}{renderSquare(5)}
       </div>
-      <div className='board-row'>
-        <Square /><Square /><Square />
+      <div className="board-row">
+        {renderSquare(6)}{renderSquare(7)}{renderSquare(8)}
       </div>
     </div>
   );
@@ -39,7 +46,7 @@ const Board = () => {
 // Game component
 const Game = () => {
   return (
-    <div className='game'>
+    <div className="game">
       Game
       <Board />
     </div>
@@ -49,5 +56,5 @@ const Game = () => {
 // Game component render
 ReactDOM.render(
   <Game />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
