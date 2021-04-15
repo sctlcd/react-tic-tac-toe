@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body {
+  background-color: #000;
+  color: white;
+  margin: 20px;
+  font: 32px 'Zen Dots', cursive;
+}
