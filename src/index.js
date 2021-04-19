@@ -25,6 +25,14 @@ const Board = () => {
   const handledClickEvent = (i) => {
     // 1. Make a copy of squares state array
     const newSquares = [...squares];
+
+    const winnerDeclared = Boolean(calculateWinner(newSquares));
+    const squaredFilled = Boolean(newSquares[i]);
+    // Returning early - if a player has already won or the square is already filled
+    if (winnerDeclared || squaredFilled) {
+      return;
+    }
+
     // 2. Mutate the copy, setting the i-th element to 'X'
     newSquares[i] = xIsNext ? 'X' : 'O';
     // 3. Call the setSquares functions with the mutated copy
@@ -47,11 +55,6 @@ const Board = () => {
     `Next player: ${xIsNext ? 'X' : 'O'}`;
 
   return (
-    // <div style={{
-    //   backgroundColor: "grey",
-    //   margin: 10,
-    //   padding: 20,
-    // }}>
     <div>
       <div className="status">{status}</div>
       <div className="board-row">
@@ -84,6 +87,7 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
+// Calculate winner function
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
