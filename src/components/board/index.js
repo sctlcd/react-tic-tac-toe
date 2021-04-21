@@ -1,5 +1,6 @@
 import React from 'react';
-import Square from './Square'
+import Square from '../square/index'
+import './style.css'
 
 class Board extends React.Component {
 
@@ -10,7 +11,6 @@ class Board extends React.Component {
       xIsNext: true,
     };
   };
-
 
   // https://www.debuggr.io/react-setstate-is-not-a-function/
   // https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important
