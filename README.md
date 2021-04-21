@@ -68,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Credit
+[favicon.ico](https://www.flaticon.com/free-icon/tic-tac-toe-hand-drawn-game_57180?term=tic%20tac%20toe&page=1&position=1&page=1&position=1&related_id=57180&origin=search) - copyright [Freepik](https://www.freepik.com)
