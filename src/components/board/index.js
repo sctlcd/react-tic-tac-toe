@@ -55,7 +55,7 @@ class Board extends React.Component {
       `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
 
     return (
-      <div>
+      <div className="wrapper">
         <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
