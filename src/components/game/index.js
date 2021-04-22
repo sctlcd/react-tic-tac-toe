@@ -6,7 +6,7 @@ export default function Game() {
   // Render Game component
   return (
     <div className="game">
-      Tic-Tac-Toe
+      <h1 className="title">Tic-Tac-Toe</h1>
       <Board />
     </div>
   );
