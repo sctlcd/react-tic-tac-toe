@@ -7,21 +7,22 @@ class Game extends React.Component {
     super(props);
     this.state = {
       history: [{
-        square: Array(9).fill(null),
+        squares: Array(9).fill(null)
       }],
-      xIsNext: true,
+      stepNumber: 0,
+      xIsNext: true
     };
   }
 
   // https://www.debuggr.io/react-setstate-is-not-a-function/
   // https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important
-  // handledClickEvent function
-  handledClickEvent(i) {
-    const history = this.state.history;
-    const current = history[history.lenght - 1];
+  // handleClick function
+  handleClick(i) {
+    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const current = history[history.length - 1];
 
     // 1. Make a copy of squares state array
-    const newSquares = this.state.squares.slice();
+    const newSquares = current.squares.slice();
     const winnerDeclared = Boolean(calculateWinner(newSquares));
     const squaredFilled = Boolean(newSquares[i]);
     // Returning early - if a player has already won or the square is already
@@ -37,16 +38,40 @@ class Game extends React.Component {
     // React that this component and its children need to be re-rendered with
     // the updated state
     this.setState({
-      squares: newSquares,
-      xIsNext: !this.state.xIsNext,
-    })
+      history: history.concat([
+        {
+          squares: newSquares
+        }
+      ]),
+      stepNumber: history.length,
+      xIsNext: !this.state.xIsNext
+    });
+  }
+
+  jumpTo(step) {
+    this.setState({
+      stepNumber: step,
+      xIsNext: (step % 2) === 0
+    });
   }
 
   // Render Game component
   render() {
     const history = this.state.history;
-    const current = history[history.lenght - 1];
-    const winner = calculateWinner(this.state.squares);
+    const current = history[this.state.stepNumber];
+    const winner = calculateWinner(current.squares);
+
+    const moves = history.map((step, move) => {
+      const desc = move ?
+      'Go to move #' + move :
+      'Go to game start';
+      return (
+        <li key={move}>
+          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+        </li>
+      );
+    });
+
     let status = winner ?
       `Winner: ${winner}` :
       `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
@@ -57,12 +82,12 @@ class Game extends React.Component {
           <h1 className="title">Tic-Tac-Toe</h1>
           <Board
             squares={current.squares}
-            onClick={(i) => this.handledClickEvent(i)}
+            onClick={(i) => this.handleClick(i)}
           />
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{/* TODO */}</ol>
+          <ol>{moves}</ol>
         </div>
       </div>
     );
