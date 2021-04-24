@@ -88,8 +88,8 @@ class Game extends React.Component {
             />
           </div>
           <div className="game-child game-info">
-            <div>{status}</div>
-            <ol>{moves}</ol>
+            <div className="status">{status}</div>
+            <ol className="moves">{moves}</ol>
           </div>
         </div>
       </div>
