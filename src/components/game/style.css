@@ -25,12 +25,6 @@ button,
 
 /* xxs - Double extra small devices (portrait phones, less than 576px) */
 @media (max-width: 349.99px) {
-  .title {
-    margin-block-start: 3rem;
-    margin-block-end: 3rem;
-    font-size: 42px;
-  }
-
   .game-container {
     display: block;
   }
@@ -62,12 +56,6 @@ button,
 
 /* xs - Extra small devices (portrait phones, less than 576px) */
 @media (min-width: 350px) and (max-width: 575.99px) {
-  .title {
-    margin-block-start: 3rem;
-    margin-block-end: 3rem;
-    font-size: 42px;
-  }
-
   .game-container {
     display: block;
   }

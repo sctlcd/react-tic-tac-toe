@@ -5,3 +5,21 @@
   margin-block-end: 6rem;
   text-transform: capitalize;
 }
+
+/* xxs - Double extra small devices (portrait phones, less than 576px) */
+@media (max-width: 349.99px) {
+  .title {
+    margin-block-start: 3rem;
+    margin-block-end: 4rem;
+    font-size: 42px;
+  }
+}
+
+/* xs - Extra small devices (portrait phones, less than 576px) */
+@media (min-width: 350px) and (max-width: 575.99px) {
+  .title {
+    margin-block-start: 3rem;
+    margin-block-end: 4rem;
+    font-size: 42px;
+  }
+}
