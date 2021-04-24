@@ -4,17 +4,90 @@
   align-items: center;
 }
 
-.title {
-  font-size: 3rem;
-  color: #9b1103;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+/* credit: https://coder-coder.com/display-divs-side-by-side/ */
+.game-container {
+  display: flex;
+}
+
+.game-child {
+    flex: 1;
+}
+
+.game-child:first-child {
+    margin-right: 5rem;
+}
+
+button,
+::marker {
+  font: 18px 'Indie Flower', cursive;
+  font-weight: bold;
+}
+
+/* xxs - Double extra small devices (portrait phones, less than 576px) */
+@media (max-width: 349.99px) {
+  .game-container {
+    display: block;
+  }
+
+  .game-child:first-child {
+      margin-right: 0;
+  }
+
+  button,
+  ::marker {
+    font: 18px 'Indie Flower', cursive;
+    font-weight: bold;
+  }
+
+  .game-info {
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .status {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .moves {
+    margin-top: 1rem;
+  }
 }
 
 /* xs - Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.99px) {
-  .title {
-    margin-block-start: 0.7em;
-    margin-block-end: 0.7em;
+@media (min-width: 350px) and (max-width: 575.99px) {
+  .game-container {
+    display: block;
+  }
+
+  .game-child:first-child {
+      margin-right: 0;
+  }
+
+  button,
+  ::marker {
+    font: 18px 'Indie Flower', cursive;
+    font-weight: bold;
+  }
+
+  .game-info {
+    margin-left: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .status {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .moves {
+    margin-top: 1rem;
+  }
+}
+
+/* sm - Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .game-child:first-child {
+      margin-right: 2rem;
   }
 }

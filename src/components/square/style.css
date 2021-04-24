@@ -16,3 +16,12 @@
   outline: none;
   background: #9b1103;
 }
+
+/* xxs - Double extra small devices (portrait phones, less than 576px) */
+@media (max-width: 349.99px) {
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: 55px;
+  }
+}

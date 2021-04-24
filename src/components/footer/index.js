@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './style.css';
 
 export default function Footer() {
-  // Render Footer
+  // Render Footer component
   return (
     <div className='footer'>
     <p> Tic-Tac-Toe
