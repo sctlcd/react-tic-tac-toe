@@ -4,13 +4,6 @@
   align-items: center;
 }
 
-.title {
-  font-size: 3rem;
-  color: #9b1103;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-}
-
 /* xs - Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.99px) {
   .title {

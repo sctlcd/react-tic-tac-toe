@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from '../board/index';
+import Header from '../header/index';
 import './style.css';
 
 class Game extends React.Component {
@@ -79,7 +80,7 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <h1 className="title">Tic-Tac-Toe</h1>
+          <Header />
           <Board
             squares={current.squares}
             onClick={(i) => this.handleClick(i)}
