@@ -1,6 +1,7 @@
 .title {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #9b1103;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 4rem;
+  margin-block-end: 6rem;
+  text-transform: capitalize;
 }

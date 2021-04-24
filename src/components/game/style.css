@@ -4,6 +4,25 @@
   align-items: center;
 }
 
+/* credit: https://coder-coder.com/display-divs-side-by-side/ */
+.game-container {
+  display: flex;
+}
+
+.game-child {
+    flex: 1;
+}
+
+.game-child:first-child {
+    margin-right: 5rem;
+}
+
+button,
+::marker {
+  font: 18px 'Indie Flower', cursive;
+  font-weight: bold;
+}
+
 /* xs - Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.99px) {
   .title {

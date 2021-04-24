@@ -5,6 +5,7 @@ body {
   color: #fafafa;
   margin: 20px;
   font: 32px 'Indie Flower', cursive;
+  font-weight: bold;
   height: 100vh;
   padding: 0;
 }
