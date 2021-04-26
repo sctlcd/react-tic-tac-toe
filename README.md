@@ -1,73 +1,119 @@
-# Getting Started with Create React App
+# [React Tic-Tac-Toe](https://sctlcd.github.io/react-tic-tac-toe/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://github.com/sctlcd/react-tic-tac-toe/blob/master/assets/images/javascript_drum_kit_multi_device_website_mockup.png" alt="React Tic-Tac-Toe" width="700">
 
-## Available Scripts
+[Let's play!](https://sctlcd.github.io/react-tic-tac-toe/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+# Table of Contents <a name="TableOfContents"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [About](#About)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+	- [How to play](#HowToPlay)
 
-### `npm test`
+2. [Technologies Used](#TechnologiesUsed)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+	- [Front-End Technologies](#Front-end-technologies)
 
-### `npm run build`
+3. [Deployment](#Deployment)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+	- [Deployment – Live website](#Deploymentlivewebsite)
+	- [Deployment – Run locally](#Deploymentrunlocally)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. [Credits](#Credits)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	- [Media](#Media)
+	- [Code](#Code)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## About <a name="About"></a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### How to play <a name="HowToPlay"></a>
+1. The game is played on a grid that's 3 squares by 3 squares.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Player 1 is X, Player 2 is O. Players take turns putting their marks in empty squares.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. The first player to get 3 of his marks in a row (up, down, across, or diagonally) is the winner.
 
-## Learn More
+4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Travel Time option: Players can go back in time to the previous moves in the game by clicking on the buttons on the right side of the screen.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Back to [top](#TableOfContents)
 
-### Code Splitting
+ ---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used <a name="TechnologiesUsed"></a>
 
-### Analyzing the Bundle Size
+- [GitHub](https://github.com/) - Used as remote storage of my code online.
+- [Atom](https://atom.io/) - Used as a local IDE.
+- [Compressjpeg](https://compressjpeg.com/) - Used to compress images for loading faster
+- [Techsini](https://techsini.com/multi-mockup/) - Used to generate multi-device website mockup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Back to [top](#TableOfContents)
 
-### Making a Progressive Web App
+ ---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##### Front-End Technologies <a name="Front-end-technologies"></a>
 
-### Advanced Configuration
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
+- [JavaScript](https://www.javascript.com/): Used for user interactions.
+- [React](https://reactjs.org/): front end, JavaScript library used for building user interfaces or UI components. The main purpose of React is to be fast, scalable, and simple.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Back to [top](#TableOfContents)
 
-### Deployment
+ ---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deployment <a name="Deployment"></a>
 
-### `npm run build` fails to minify
+### Deployment – Live Website <a name="Deploymentlivewebsite"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#TO_UPDATE https://github.com/gitname/react-gh-pages
 
-### Credit
-[favicon.ico](https://www.flaticon.com/free-icon/tic-tac-toe-hand-drawn-game_57180?term=tic%20tac%20toe&page=1&position=1&page=1&position=1&related_id=57180&origin=search) - copyright [Freepik](https://www.freepik.com)
+ 1.	Create repository in GitHub and give it a relevant name.
+ 2.	Click on your repository to open it.
+ 3.	Find the “settings” tab and click on it.
+ 4.	Scroll down until the “GitHub Pages” sections.
+ 5.	Under the “source” drop down menu, choose a branch. I chose “gh-pages” and select it.
+ 6.	You will then see a URL to your live webpage. In my case the URL is https://sctlcd.github.io/react-tic-tac-toe/
+
+Back to [top](#TableOfContents)
+
+ ---
+
+### Deployment – Run Locally <a name="Deploymentrunlocally"></a>
+
+1.	Again, click on the repository called [JavaScript Drum Kit](https://github.com/sctlcd/react-tic-tac-toe)
+2.	Along the top bar, find the “clone or download” button.
+3.	Here you have the option to clone by HTTPS or SSH.
+4.	Once you have chose your desired option, then click the copy icon next to the URL.
+5.	Open Git Bash.
+6.	Ensure you are in the correct directory which you want to copy the code into. If not, change the directory.
+7.	In the terminal, write
+			$ git clone https://github.com/sctlcd/react-tic-tac-toe.git
+8.	Press the enter button and your clone will be created.
+
+Back to [top](#TableOfContents)
+
+---
+
+## Credits <a name="Credits"></a>
+
+### Media <a name="Media"></a>
+
+Sources of the images used on this site:
+
+- From public directory - [Github](https://github.com/sctlcd/react-tic-tac-toe/tree/master/assets/images)
+	- [favicon.ico](https://www.flaticon.com/free-icon/tic-tac-toe-hand-drawn-game_57180?term=tic%20tac%20toe&page=1&position=1&page=1&position=1&related_id=57180&origin=search) | copyright [Freepik](https://www.freepik.com)
+
+### Code <a name="Code"></a>
+
+- React Tic-Tac-Toe tutorial - [React](https://reactjs.org/tutorial/tutorial.html)
+- Deploying a React App* to GitHub Pages - [Github](https://github.com/gitname/react-gh-pages)
+
+Back to [top](#TableOfContents)
+
+---
