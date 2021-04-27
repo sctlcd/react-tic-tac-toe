@@ -1,6 +1,6 @@
 # [React Tic-Tac-Toe](https://sctlcd.github.io/react-tic-tac-toe/)
 
-<img src="https://github.com/sctlcd/react-tic-tac-toe/blob/master/assets/images/javascript_drum_kit_multi_device_website_mockup.png" alt="React Tic-Tac-Toe" width="700">
+<img src="https://github.com/sctlcd/react-tic-tac-toe/tree/master/src/images/react-tic-tac-toe_multi_device_website_mockup-min.png" alt="React Tic-Tac-Toe" width="700">
 
 [Let's play!](https://sctlcd.github.io/react-tic-tac-toe/)
 
@@ -18,6 +18,7 @@
 
 3. [Deployment](#Deployment)
 
+	- [Prerequisites](#Prerequisites)
 	- [Deployment – Live website](#Deploymentlivewebsite)
 	- [Deployment – Run locally](#Deploymentrunlocally)
 
@@ -69,16 +70,78 @@ Back to [top](#TableOfContents)
 
 ## Deployment <a name="Deployment"></a>
 
+### Prerequisites
+
+1. An adequate version of [`Node.js`](https://nodejs.org/en/) is installed. Here's the adequate version I use:
+		$ node --version
+		v12.18.4
+
+2. An adequate version of [`npm`](https://www.npmjs.com/) is installed. Here's the adequate version I use:
+		$ npm --version
+		v7.5.4
+
+3. A [GitHub](https://github.com/) account
+
+4. A command-line Git client [setup according to GitHub](https://docs.github.com/en/github/getting-started-with-github/set-up-git)
+
 ### Deployment – Live Website <a name="Deploymentlivewebsite"></a>
 
-#TO_UPDATE https://github.com/gitname/react-gh-pages
+1.	Create an empty repository on GitHub and give it a relevant name. In my case the repo sitory is named `react-tic-tac-toe`
+ - By empty, I mean without a `README.md` file, a `.gitignore` file, a `LICENSE` file, or any other files.
 
- 1.	Create repository in GitHub and give it a relevant name.
- 2.	Click on your repository to open it.
- 3.	Find the “settings” tab and click on it.
- 4.	Scroll down until the “GitHub Pages” sections.
- 5.	Under the “source” drop down menu, choose a branch. I chose “gh-pages” and select it.
- 6.	You will then see a URL to your live webpage. In my case the URL is https://sctlcd.github.io/react-tic-tac-toe/
+2. Create a new React app on your computer.
+		$ npx create-react-app my-app
+ - This is the app you will deploy to GitHub Pages in step 7.
+
+3. Install the `gh-pages` package as a "dev-dependency" of the app.
+		$ cd my-app
+		$ npm install gh-pages --save-dev
+
+4. Add some properties to the app's `package.json` file.
+ - At the top level, add a `homepage` property. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `sctlcd` and the name of my GitHub repository is `react-tic-tac-toe`, I added the following property:
+			//...
+			"homepage": "http://sctlcd.github.io/react-tic-tac-toe",
+			//...
+
+ - In the existing `scripts` property, add a `predeploy` property and a `deploy` property, each having the values shown below:
+			"scripts": {
+				//...
+				"predeploy": "npm run build",
+				"deploy": "gh-pages -d build"
+				//...
+			}
+
+5. Create a git repository in the app's folder.
+		$ git init
+		Initialized empty Git repository in C:/path/to/react-gh-pages/.git/
+
+6. Add the GitHub repository as a "remote" in your local git repository.
+		$ git remote add origin https://github.com/sctlcd/react-tic-tac-toe.git
+ - This will make it so the gh-pages package knows where you want it to deploy your app in step 7.
+ - It will also make it so git knows where you want it to push your source code (i.e. the commits on your master branch) in step 8.
+
+7. Generate a production build of your app, and deploy it to GitHub Pages.
+		$ npm run deploy
+	- That's it! Your app is now accessible at the URL you specified in step 4.
+	- In my case, my app is now accessible at: https://sctlcd.github.io/react-tic-tac-toe/
+	- Check GitHub repository: `master` branch did not exist, a `gh-pages` branch did exist. `gh-pages` branch contained the built app code, as opposed to the app's source code.
+
+8. Optionally, commit your source code to the "master" branch and push your commit to GitHub.
+		$ git add .
+		$ git commit -m "Create a React app and publish it to GitHub Pages"
+		$ git push origin master
+	- GitHub repository: `master` branch now existed, and it contained the app's source code.
+	- So, the master branch held the source code, and the gh-pages branch held the built app code.
+
+9. In Github click on your repository `react-tic-tac-toe` to open it.
+
+10. Find the “settings” tab and click on it.
+
+11. Scroll down until the “GitHub Pages” sections.
+
+12. Under the “source” drop down menu, choose a branch. I chose “gh-pages” and select it.
+
+13. You will then see a URL to your live webpage. In my case the URL is https://sctlcd.github.io/react-tic-tac-toe/
 
 Back to [top](#TableOfContents)
 
@@ -86,7 +149,7 @@ Back to [top](#TableOfContents)
 
 ### Deployment – Run Locally <a name="Deploymentrunlocally"></a>
 
-1.	Again, click on the repository called [JavaScript Drum Kit](https://github.com/sctlcd/react-tic-tac-toe)
+1.	Again, click on the repository called [react-tic-tac-toe](https://github.com/sctlcd/react-tic-tac-toe)
 2.	Along the top bar, find the “clone or download” button.
 3.	Here you have the option to clone by HTTPS or SSH.
 4.	Once you have chose your desired option, then click the copy icon next to the URL.
@@ -112,6 +175,7 @@ Sources of the images used on this site:
 ### Code <a name="Code"></a>
 
 - React Tic-Tac-Toe tutorial - [React](https://reactjs.org/tutorial/tutorial.html)
+- Deployment - [Create React App](https://create-react-app.dev/docs/deployment/#github-pages-https-pagesgithubcom)
 - Deploying a React App* to GitHub Pages - [Github](https://github.com/gitname/react-gh-pages)
 
 Back to [top](#TableOfContents)
