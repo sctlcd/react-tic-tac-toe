@@ -1,6 +1,6 @@
 # [React Tic-Tac-Toe](https://sctlcd.github.io/react-tic-tac-toe/)
 
-<img src="https://github.com/sctlcd/react-tic-tac-toe/tree/master/src/images/react-tic-tac-toe_multi_device_website_mockup-min.png" alt="React Tic-Tac-Toe" width="700">
+<img src="https://github.com/sctlcd/react-tic-tac-toe/blob/master/src/images/react-tic-tac-toe_multi_device_website_mockup-min.png" alt="React Tic-Tac-Toe" width="700">
 
 [Let's play!](https://sctlcd.github.io/react-tic-tac-toe/)
 
