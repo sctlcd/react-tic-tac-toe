@@ -94,9 +94,9 @@ v7.5.4
 	- By empty, I mean without a `README.md` file, a `.gitignore` file, a `LICENSE` file, or any other files.
 
 2. Create a new React app on your computer.
-```
-$ npx create-react-app my-app
-```
+	```
+	$ npx create-react-app my-app
+	```
 
 	- This is the app you will deploy to GitHub Pages in step 7.
 
