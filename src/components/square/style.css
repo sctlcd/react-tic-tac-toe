@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.square {
+  background-color: #444;
+  color: #fafafa;
+  border: 1px solid #999;
+  padding: 0;
+  font-size: 70px;
+  text-align: top;
+  width: 100px;
+  height: 100px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.square:focus {
+  outline: none;
+  background: #9b1103;
+}
+
+/* xxs - Double extra small devices (portrait phones, less than 576px) */
+@media (max-width: 349.99px) {
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: 55px;
+  }
+}
