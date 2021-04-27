@@ -97,6 +97,7 @@ v7.5.4
 ```
 $ npx create-react-app my-app
 ```
+
 	- This is the app you will deploy to GitHub Pages in step 7.
 
 3. Install the `gh-pages` package as a "dev-dependency" of the app.
@@ -107,21 +108,21 @@ $ npm install gh-pages --save-dev
 
 4. Add some properties to the app's `package.json` file.
 	- At the top level, add a `homepage` property. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `sctlcd` and the name of my GitHub repository is `react-tic-tac-toe`, I added the following property:
-```
-//...
-"homepage": "http://sctlcd.github.io/react-tic-tac-toe",
-//...
-```
+	```
+	//...
+	"homepage": "http://sctlcd.github.io/react-tic-tac-toe",
+	//...
+	```
 
 	- In the existing `scripts` property, add a `predeploy` property and a `deploy` property, each having the values shown below:
-```
-"scripts": {
-	//...
-	"predeploy": "npm run build",
-	"deploy": "gh-pages -d build"
-	//...
-}
-```
+	```
+	"scripts": {
+		//...
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
+		//...
+	}
+	```
 
 5. Create a git repository in the app's folder.
 ```
@@ -130,26 +131,29 @@ Initialized empty Git repository in C:/path/to/react-gh-pages/.git/
 ```
 
 6. Add the GitHub repository as a "remote" in your local git repository.
-```
-$ git remote add origin https://github.com/sctlcd/react-tic-tac-toe.git
-```
+	```
+	$ git remote add origin https://github.com/sctlcd/react-tic-tac-toe.git
+	```
+
 	- This will make it so the gh-pages package knows where you want it to deploy your app in step 7.
 	- It will also make it so git knows where you want it to push your source code (i.e. the commits on your master branch) in step 8.
 
 7. Generate a production build of your app, and deploy it to GitHub Pages.
-```
-$ npm run deploy
-```
+	```
+	$ npm run deploy
+	```
+
 	- That's it! Your app is now accessible at the URL you specified in step 4.
 	- In my case, my app is now accessible at: https://sctlcd.github.io/react-tic-tac-toe/
 	- Check GitHub repository: `master` branch did not exist, a `gh-pages` branch did exist. `gh-pages` branch contained the built app code, as opposed to the app's source code.
 
 8. Optionally, commit your source code to the "master" branch and push your commit to GitHub.
-```
-$ git add .
-$ git commit -m "Create a React app and publish it to GitHub Pages"
-$ git push origin master
-```
+	```
+	$ git add .
+	$ git commit -m "Create a React app and publish it to GitHub Pages"
+	$ git push origin master
+	```
+
 	- GitHub repository: `master` branch now existed, and it contained the app's source code.
 	- So, the master branch held the source code, and the gh-pages branch held the built app code.
 
